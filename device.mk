@@ -12,13 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/samsung/s3ve3g
+# Proprietary files
+$(call inherit-product, vendor/samsung/matissewifi/matissewifi-vendor.mk)
+
+
+PRODUCT_CHARACTERISTICS := tablet
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Proprietary files
-$(call inherit-product, vendor/samsung/s3ve3g/s3ve3g-vendor.mk)
+LOCAL_PATH := device/samsung/matissewifi
 
 # Media
 PRODUCT_COPY_FILES += \

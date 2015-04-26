@@ -54,28 +54,26 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     property_get("ro.bootloader", bootloader);
 
-    if (strstr(bootloader, "I9301I")) {
-        /* s3ve3g */
-        property_set("ro.build.fingerprint", "samsung/s3ve3gxx/s3ve3g:4.4.2/KOT49H/I9301IXXUANL1:user/release-keys");
-        property_set("ro.build.description", "s3ve3gxx-user 4.4.2 KOT49H I9301IXXUANL1 release-keys");
-        property_set("ro.product.model", "GT-I9301I");
-        property_set("ro.product.device", "s3ve3g");
-        property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
-        gsm_properties();
+    if (strstr(bootloader, "T530")) {
+        /* matissewifi */
+        property_set("ro.build.fingerprint", "samsung/matissewifixx/matissewifi:4.4.2/KOT49H/T530XXU1ANH7:user/release-keys");
+        property_set("ro.build.description", "matissewifixx-user 4.4.2 KOT49H T530XXU1ANH7 release-keys");
+        property_set("ro.product.model", "SM-T530");
+        property_set("ro.product.device", "matissewifi");
     } else if (strstr(bootloader, "I9301Q")) {
-        /* s3ve3gjv */
-        property_set("ro.build.fingerprint", "samsung/s3ve3gjv/s3ve3g:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
-        property_set("ro.build.description", "s3ve3gjv-user 4.4.2 KOT49H I9301QXXUANH1 release-keys");
+        /* matissewifijv */
+        property_set("ro.build.fingerprint", "samsung/matissewifijv/matissewifi:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
+        property_set("ro.build.description", "matissewifijv-user 4.4.2 KOT49H I9301QXXUANH1 release-keys");
         property_set("ro.product.model", "GT-I9301Q");
-        property_set("ro.product.device", "s3ve3gjv");
+        property_set("ro.product.device", "matissewifijv");
         property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
         gsm_properties();
     } else if (strstr(bootloader, "I9300I")) {
-        /* s3ve3gds */
-        property_set("ro.build.fingerprint", "samsung/s3ve3gdsxx/s3ve3gds:4.4.4/KTU84P/I9300IXWUBNJ1:user/release-keys");
-        property_set("ro.build.description", "s3ve3gdsxx-user 4.4.4 KTU84P I9300IXWUBNJ1 release-keys");
+        /* matissewifids */
+        property_set("ro.build.fingerprint", "samsung/matissewifidsxx/matissewifids:4.4.4/KTU84P/I9300IXWUBNJ1:user/release-keys");
+        property_set("ro.build.description", "matissewifidsxx-user 4.4.4 KTU84P I9300IXWUBNJ1 release-keys");
         property_set("ro.product.model", "GT-I9300I");
-        property_set("ro.product.device", "s3ve3gds");
+        property_set("ro.product.device", "matissewifids");
         property_set("persist.dsds.enabled", "true");
         property_set("persist.radio.multisim.config", "dsds");
         property_set("ro.telephony.ril_class", "SamsungMSM8226DSRIL");
