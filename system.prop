@@ -1,4 +1,4 @@
-# System.prop for 
+# System.prop for matissewifi
 
 # RIL
 rild.libpath=/system/lib/libsec-ril.so
@@ -39,7 +39,7 @@ camera2.portability.force_api=1
 # Display
 debug.composition.type=c2d 
 ro.opengles.version=196608
-ro.sf.lcd_density=240
+ro.sf.lcd_density=160
 
 # GPS
 persist.gps.qc_nlp_in_use=1
@@ -52,10 +52,9 @@ persist.timed.enable=true
 ro.qualcomm.cabl=0
 ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
 
-# Radio
-persist.data.netmgrd.qos.enable=false
-persist.radio.add_power_save=1
-ro.use_data_netmgrd=false
+# radio
+ro.radio.noril=yes
+ro.carrier=wifi-only
 
 # Sensors
 ro.qc.sdk.gestures.camera=false
@@ -64,6 +63,3 @@ ro.qc.sdk.sensors.gestures=true
 
 # Wi-Fi
 wifi.interface=wlan0
-
-PRODUCT_RELEASE_NAME := SM-T530
-PRODUCT_NAME := bliss_matissewifi
