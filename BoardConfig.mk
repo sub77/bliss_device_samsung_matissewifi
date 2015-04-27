@@ -58,3 +58,17 @@ BOARD_SEPOLICY_DIRS += device/samsung/matissewifi/sepolicy
 BOARD_SEPOLICY_UNION += \
        hostapd.te \
        platform_app.te
+
+# BlissPop Configs
+TARGET_TC_ROM := 4.8-sm
+TARGET_TC_KERNEL := 4.8-sm
+BLISSIFY := true
+BLISS_O3 := true
+BLISS_STRICT := false
+BLISS_GRAPHITE := false
+BLISS_KRAIT := true
+BLISS_PIPE := false
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
+-include vendor/bliss/config/sm.mk
