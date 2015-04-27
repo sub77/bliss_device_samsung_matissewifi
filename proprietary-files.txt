@@ -23,7 +23,7 @@ vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 vendor/lib/libcsd-client.so
 vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
+#vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
 # Bluetooth
@@ -35,9 +35,9 @@ vendor/lib/libbtnv.so
 bin/mm-qcamera-daemon
 lib/hw/camera.msm8226.so:lib/hw/camera.vendor.msm8226.so
 lib/libarcsoft_flawlessface.so
-lib/libarcsoft_night_shot.so
+#lib/libarcsoft_night_shot.so
 lib/libarcsoft_panorama_burstcapture.so
-lib/libarcsoft_picaction.so
+#lib/libarcsoft_picaction.so
 lib/libarcsoft_sensorndk.so
 lib/libarcsoft_skin_soften.so
 lib/libmmcamera_cac.so
@@ -80,10 +80,10 @@ vendor/lib/libqomx_jpegenc.so
 vendor/lib/libsensor1.so
 
 # Camera chromatix
-lib/B08QT_libTsAe.so
-lib/B08QT_libTsAf.so
-lib/B08QT_libTs_J_Accm.so
-lib/B08QT_libTs_J_Awb.so
+#lib/B08QT_libTsAe.so
+#lib/B08QT_libTsAf.so
+#lib/B08QT_libTs_J_Accm.so
+#lib/B08QT_libTs_J_Awb.so
 lib/libAfSingle.so
 lib/libchromatix_s5k6a3yx_smart_stay.so
 lib/libchromatix_s5k6a3yx_vt.so
@@ -135,9 +135,9 @@ cameradata/datapattern_front_420sp.yuv
 # DRM
 bin/qseecomd
 lib/libhdcp2.so
-vendor/lib/drm/libdrmwvmplugin.so
+#vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libdrmdecrypt.so
+#vendor/lib/libdrmdecrypt.so
 vendor/lib/libdrmdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -145,11 +145,11 @@ vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
+#vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 
 # GPS
--app/com.qualcomm.location/com.qualcomm.location.apk
+##-app/com.qualcomm.location/com.qualcomm.location.apk
 etc/permissions/com.qualcomm.location.xml
 lib/hw/flp.default.so
 lib/libloc_api_v02.so
@@ -171,9 +171,9 @@ vendor/lib/libCB.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/libOpenCL.so
-vendor/lib/libRSDriver_adreno.so
-vendor/lib/librs_adreno.so
-vendor/lib/librs_adreno_sha1.so
+#vendor/lib/libRSDriver_adreno.so
+#vendor/lib/librs_adreno.so
+#vendor/lib/librs_adreno_sha1.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
@@ -249,7 +249,7 @@ vendor/lib/libxml.so
 
 # Sensors
 lib/hw/sensors.msm8226.so
-lib/libyasalgo.so
+#lib/libyasalgo.so
 
 # Thermal
 bin/thermal-engine
@@ -257,7 +257,7 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
--app/TimeService/TimeService.apk
+#-app/TimeService/TimeService.apk
 bin/time_daemon
 vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
