@@ -31,6 +31,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml
 
+# Radio (needed for audio controls even on wifi-only)
+PRODUCT_PACKAGES += \
+    libsecril-client \
+    libsecril-client-sap
+
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.crda.sh \
