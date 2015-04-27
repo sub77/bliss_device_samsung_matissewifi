@@ -19,6 +19,7 @@ TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifixx
 
 LOCAL_PATH := device/samsung/matissewifi
 
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
@@ -27,7 +28,6 @@ BOARD_HARDWARE_CLASS := device/samsung/matissewifi/cmhw
 
 # Init
 TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_matissewifi.c
-#TARGET_UNIFIED_DEVICE := true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
@@ -50,9 +50,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12562627584
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/matissewifi
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
