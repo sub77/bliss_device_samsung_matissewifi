@@ -1,16 +1,31 @@
-LOCAL_PATH := device/samsung/matissewifi
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+# The gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
+$(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.mk)
+
+DEVICE_PACKAGE_OVERLAYS += device/samsung/matissewifi/overlay
+
+LOCAL_PATH := device/samsung/matissewifi
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#	LOCAL_KERNEL := $(LOCAL_PATH)/kernAl
+#else
+#	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/kernel:kernel \
-    $(LOCAL_PATH)/dt.img:dt.img \
-    $(LOCAL_PATH)/fstab.qcom:root/fstab.qcom
+    $(LOCAL_PATH)/kernAl:kernel
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fstab.qcom:recovery/root/fstab.qcom
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/selinux/file_contexts:recovery/root/prebuilt_file_contexts \
+	$(LOCAL_PATH)/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+	$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 
 $(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_NAME := matissewifi
+PRODUCT_NAME := samsung_matissewifi
+PRODUCT_BRAND := Samsung
