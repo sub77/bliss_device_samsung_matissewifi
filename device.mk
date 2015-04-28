@@ -1,4 +1,4 @@
-LOCAL_PATH := device/xiaomi/armani
+LOCAL_PATH := device/samsung/matissewifi
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
@@ -9,8 +9,8 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/kernel:kernel \
     $(LOCAL_PATH)/dt.img:dt.img \
-    $(LOCAL_PATH)/fstab.armani:root/fstab.armani
+    $(LOCAL_PATH)/fstab.qcom:root/fstab.qcom
 
 $(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_NAME := armani
+PRODUCT_NAME := matissewifi
