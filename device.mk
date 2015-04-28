@@ -15,13 +15,15 @@
 # Proprietary files
 $(call inherit-product, vendor/samsung/matissewifi/matissewifi-vendor.mk)
 
+LOCAL_PATH := device/samsung/matissewifi
 
 PRODUCT_CHARACTERISTICS := tablet
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-LOCAL_PATH := device/samsung/matissewifi
+# IR
+PRODUCT_PACKAGES += consumerir.msm8226
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -35,7 +37,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsecril-client \
     libsecril-client-sap
-
 
 # Ramdisk
 PRODUCT_PACKAGES += \
