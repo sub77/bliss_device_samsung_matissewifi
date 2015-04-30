@@ -100,6 +100,15 @@ BOARD_SEPOLICY_UNION += \
         genfs_contexts \
         service_contexts
 
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+  ifeq ($(TARGET_BUILD_VARIANT),user)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+
 # BlissPop Configs
 TARGET_TC_ROM := 4.8-sm
 TARGET_TC_KERNEL := 4.8-sm
