@@ -297,26 +297,26 @@ on boot
     chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
 
     # To allow interfaces to get v6 address when tethering is enabled
-    write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet1/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet2/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet3/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet4/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet5/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet6/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet7/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio0/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio1/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio2/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio3/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio4/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio5/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_usb0/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_usb1/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_usb2/accept_ra 2
-    write /proc/sys/net/ipv6/conf/rmnet_usb3/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet1/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet2/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet3/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet4/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet5/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet6/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet7/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_sdio0/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_sdio1/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_sdio2/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_sdio3/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_sdio4/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_sdio5/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_usb0/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_usb1/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_usb2/accept_ra 2
+    #write /proc/sys/net/ipv6/conf/rmnet_usb3/accept_ra 2
 
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
@@ -325,10 +325,6 @@ on boot
     # connections on high-throughput links get dropped when
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
-
-    # NFC local data and nfcee xml storage
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
 
     # Set the console loglevel to < KERN_INFO
     # Set the default message loglevel to KERN_INFO
@@ -499,12 +495,6 @@ on boot
     chown radio system /sys/class/power_supply/battery/siop_level
     chown radio system /sys/class/power_supply/battery/test_charge_current
 
-    # NFC_NXP
-    setprop ro.nfc.port "I2C"
-    chmod 0660 /dev/pn547
-    chown nfc nfc /dev/pn547
-    symlink /dev/pn547 /dev/pn544
-
     # Permissions for Charging
     chown system radio /sys/class/power_supply/battery/batt_reset_soc
     chown system radio /sys/class/power_supply/battery/update
@@ -539,11 +529,6 @@ on boot
     # Vibetonz
     chmod 0660 /dev/tspdrv
     chown vibe vibe /dev/tspdrv
-
-    # Vibrator
-    chmod 0644 /sys/class/timed_output/vibrator/pwm_value
-    chown system system /sys/class/timed_output/vibrator/pwm_value
-    chown system system /sys/class/timed_output/vibrator/enable
 
     # Permissions for TSP
     chown system system /sys/class/sec/tsp/cmd
