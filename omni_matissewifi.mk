@@ -36,5 +36,5 @@ PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T530
 
 #Set build fingerprint / ID / Prduct Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SM-T530 TARGET_DEVICE=SM-T530 BUILD_FINGERPRINT=samsung/matissewifixx/matissewifi:4.4.2/KOT49H/T530XXU1ANH7:user/release-keys PRIVATE_BUILD_DESC="matissewifixx-user 4.4.2 KOT49H T530XXU1ANH7 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SM-T530 TARGET_DEVICE=matissewifi BUILD_FINGERPRINT=samsung/matissewifixx/matissewifi:4.4.2/KOT49H/T530XXU1ANH7:user/release-keys PRIVATE_BUILD_DESC="matissewifixx-user 4.4.2 KOT49H T530XXU1ANH7 release-keys"
 
