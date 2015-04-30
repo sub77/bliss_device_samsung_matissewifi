@@ -15,12 +15,26 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
+# bootanimation
+TARGET_BOOTANIMATION_SIZE := 1280x800
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common_tablet.mk)
+
 # Inherit from matissewifi device
 $(call inherit-product, device/samsung/matissewifi/device.mk)
 
+# Screen density
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
 # Device identifier. This must come after all inclusions
+PRODUCT_RELEASE_NAME := matissewifi
 PRODUCT_DEVICE := matissewifi
-PRODUCT_NAME := full_matissewifi
+PRODUCT_NAME := omni_matissewifi
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T530
-PRODUCT_MANUFACTURER := samsung
+
+#Set build fingerprint / ID / Prduct Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SM-T530 TARGET_DEVICE=SM-T530 BUILD_FINGERPRINT=samsung/matissewifixx/matissewifi:4.4.2/KOT49H/T530XXU1ANH7:user/release-keys PRIVATE_BUILD_DESC="matissewifixx-user 4.4.2 KOT49H T530XXU1ANH7 release-keys"
+

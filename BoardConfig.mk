@@ -41,6 +41,8 @@ TARGET_KERNEL_CONFIG := msm8226-sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
 
+#TARGET_KERNEL_RECOVERY_CONFIG
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
@@ -50,6 +52,35 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12562627584
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
+
+#TWRP
+TW_THEME := landscape_hdpi
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_INCLUDE_L_CRYPTO := true
+TW_INCLUDE_CRYPTO_SAMSUNG := true
+TW_CRYPTO_FS_TYPE := "ext4"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p26"
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,noauto_da_alloc,journal_async_commit,errors=panic"
+TW_CRYPTO_FS_FLAGS := "0x00000406"
+TW_CRYPTO_KEY_LOC := "footer"
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_NO_EXFAT_FUSE := false
+TW_NO_EXFAT := false
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_TARGET_USES_QCOM_BSP := true
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk

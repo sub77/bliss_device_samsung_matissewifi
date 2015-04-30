@@ -36,7 +36,6 @@ PRODUCT_PACKAGES += \
     libsecril-client \
     libsecril-client-sap
 
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.crda.sh \
@@ -57,6 +56,10 @@ PRODUCT_PACKAGES += \
     hostapd_default.conf \
     p2p_supplicant_overlay.conf \
     wpa_supplicant_overlay.conf
+
+# TWRP
+PRODUCT_COPY_FILES += \
+$(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
