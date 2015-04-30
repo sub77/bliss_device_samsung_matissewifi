@@ -60,20 +60,20 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "matissewifixx-user 4.4.2 KOT49H T530XXU1ANH7 release-keys");
         property_set("ro.product.model", "SM-T530");
         property_set("ro.product.device", "matissewifi");
-    } else if (strstr(bootloader, "I9301Q")) {
+    } else if (strstr(bootloader, "T531")) {
         /* matissewifijv */
-        property_set("ro.build.fingerprint", "samsung/matissewifijv/matissewifi:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
-        property_set("ro.build.description", "matissewifijv-user 4.4.2 KOT49H I9301QXXUANH1 release-keys");
-        property_set("ro.product.model", "GT-I9301Q");
-        property_set("ro.product.device", "matissewifijv");
+        property_set("ro.build.fingerprint", "samsung/matisse3gexx/matisse3gxx:4.4.4/KTU84P/T5351XWUBNJ1:user/release-keys");
+        property_set("ro.build.description", "matisse3gxx-user 4.4.4 KTU84P T531IXWUBNJ1 release-keys");
+        property_set("ro.product.model", "SM-T535");
+        property_set("ro.product.device", "matisse3g");
         property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
         gsm_properties();
-    } else if (strstr(bootloader, "I9300I")) {
+    } else if (strstr(bootloader, "T535")) {
         /* matissewifids */
-        property_set("ro.build.fingerprint", "samsung/matissewifidsxx/matissewifids:4.4.4/KTU84P/I9300IXWUBNJ1:user/release-keys");
-        property_set("ro.build.description", "matissewifidsxx-user 4.4.4 KTU84P I9300IXWUBNJ1 release-keys");
-        property_set("ro.product.model", "GT-I9300I");
-        property_set("ro.product.device", "matissewifids");
+        property_set("ro.build.fingerprint", "samsung/matisseltexx/matisseltexx:4.4.4/KTU84P/T535IXWUBNJ1:user/release-keys");
+        property_set("ro.build.description", "matisseltexx-user 4.4.4 KTU84P T535IXWUBNJ1 release-keys");
+        property_set("ro.product.model", "SM-T535");
+        property_set("ro.product.device", "matisselte");
         property_set("persist.dsds.enabled", "true");
         property_set("persist.radio.multisim.config", "dsds");
         property_set("ro.telephony.ril_class", "SamsungMSM8226DSRIL");
