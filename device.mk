@@ -36,6 +36,9 @@ PRODUCT_PACKAGES += \
     libsecril-client \
     libsecril-client-sap
 
+# IR
+PRODUCT_PACKAGES += \
+    consumerir.msm8226
 
 # Ramdisk
 PRODUCT_PACKAGES += \
