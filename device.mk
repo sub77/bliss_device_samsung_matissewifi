@@ -23,6 +23,13 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 LOCAL_PATH := device/samsung/matissewifi
 
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/kernel:kernel
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/init.recovery.qcom.rc:root/init.recovery.qcom.rc 
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
