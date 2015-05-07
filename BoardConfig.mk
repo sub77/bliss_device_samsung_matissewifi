@@ -19,6 +19,13 @@ TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifixx
 
 LOCAL_PATH := device/samsung/matissewifi
 
+# Architecture
+TARGET_ARCH := arm
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a-neon
+
+TARGET_CPU_VARIANT := krait
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
@@ -66,6 +73,7 @@ RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 HAVE_SELINUX := true
 #BOARD_HAS_NO_MISC_PARTITION := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # TWRP
 TW_THEME := landscape_hdpi
