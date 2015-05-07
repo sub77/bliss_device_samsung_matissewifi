@@ -17,9 +17,8 @@ Device Tree For Samsung Galaxy Tab 4 10.1
 
 
 
-This branch is for building CyanogenMod 12.0 Firmware.
+This branch is for building TWRP
 
 TODO:
 =======
 
-- Camera
