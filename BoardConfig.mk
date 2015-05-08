@@ -57,48 +57,7 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 BOARD_SEPOLICY_DIRS += \
        device/samsung/matissewifi/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-        adspd.te \
-        atfwd.te \
-        bluetooth.te \
-        bluetooth_loader.te \
-        bootanim.te \
-        bridge.te \
-        camera.te \
-        device.te \
-        domain.te \
-        file.te \
-        gsiffd.te \
-        ims.te \
-        irsc_util.te \
-        mdm_helper.te \
-        mediaserver.te \
-        mpdecision.te \
-        netd.te \
-        netmgrd.te \
-        platform_app.te \
-        property.te \
-        property_contexts \
-        qmux.te \
-        radio.te \
-        rild.te \
-        sensors.te \
-        service.te \
-        ss_ramdump.te \
-        surfaceflinger.te \
-        system_app.te \
-        system_server.te \
-        tcmd.te \
-        tee.te \
-        te_macros \
-        thermald.te \
-        time.te \
-        ueventd.te \
-        untrusted_app.te \
-        zygote.te \
-        file_contexts \
-        genfs_contexts \
-        service_contexts
+
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
@@ -111,13 +70,13 @@ endif
 
 # BlissPop Configs
 TARGET_TC_ROM := 4.8-sm
-TARGET_TC_KERNEL := 4.8-sm
+TARGET_TC_KERNEL := 4.9-sm
 BLISSIFY := true
 BLISS_O3 := true
 BLISS_STRICT := false
-BLISS_GRAPHITE := false
+BLISS_GRAPHITE := true
 BLISS_KRAIT := true
-BLISS_PIPE := false
+BLISS_PIPE := true
 TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
 
