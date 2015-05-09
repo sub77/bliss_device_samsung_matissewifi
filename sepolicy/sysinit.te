@@ -1,2 +1,7 @@
 #============= sysinit ==============
+allow sysinit camera_device:chr_file getattr;
+allow sysinit device:dir { read open };
+allow sysinit proc:file write;
+allow sysinit self:capability sys_admin;
+allow sysinit sysfs_lowmemorykiller:file write;
 allow sysinit unlabeled:file getattr;

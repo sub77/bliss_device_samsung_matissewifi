@@ -58,9 +58,15 @@ BOARD_SEPOLICY_DIRS += \
        device/samsung/matissewifi/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+       init.te \
+       mm-qcamerad.te \
+       netd.te \
        rmt_storage.te \
+       shell.te \
        sysinit.te \
-       tee.te
+       system_server.te \
+       tee.te \
+       wcnss_service.te \
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
