@@ -125,7 +125,6 @@ cameradata/datapattern_front_420sp.yuv
 etc/B08QT_imx175_module_info.xml
 etc/E08QL_s5k4h5yb_module_info.xml
 bin/mm-qcamera-daemon
-lib/hw/camera.msm8226.so:lib/hw/camera.vendor.msm8226.so
 vendor/lib/libchromatix_imx175_common.so
 vendor/lib/libchromatix_imx175_preview.so
 vendor/lib/libchromatix_imx219_common.so
