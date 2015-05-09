@@ -1,0 +1,6 @@
+#============= init_shell ==============
+allow init_shell block_device:blk_file { read ioctl open };
+allow init_shell kernel:process setsched;
+allow init_shell labeledfs:filesystem remount;
+allow init_shell system_file:dir create;
+allow init_shell system_file:lnk_file create;

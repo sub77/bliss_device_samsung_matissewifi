@@ -59,14 +59,21 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
        init.te \
+       init_shell.te \
        mm-qcamerad.te \
        netd.te \
+       platform_app.te \
        rmt_storage.te \
        shell.te \
        sysinit.te \
+       system_app.te \
        system_server.te \
        tee.te \
+       time_daemon.te \
+       untrusted_app.te \
+       vold.te \
        wcnss_service.te \
+       zygote.te 	
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
@@ -78,14 +85,14 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # BlissPop Configs
-TARGET_TC_ROM := 4.8-sm
-TARGET_TC_KERNEL := 4.9-sm
+TARGET_TC_ROM := 4.8
+TARGET_TC_KERNEL := 4.8
 BLISSIFY := true
-BLISS_O3 := true
+BLISS_O3 := false
 BLISS_STRICT := false
-BLISS_GRAPHITE := true
-BLISS_KRAIT := true
-BLISS_PIPE := true
+BLISS_GRAPHITE := false
+BLISS_KRAIT := false
+BLISS_PIPE := false
 TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
 
