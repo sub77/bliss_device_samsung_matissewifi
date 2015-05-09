@@ -55,38 +55,16 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     property_get("ro.bootloader", bootloader);
 
     if (strstr(bootloader, "T530")) {
-        /* matissewifi */
-        property_set("ro.build.fingerprint", "samsung/matissewifixx/matissewifi:4.4.2/KOT49H/T530XXU1ANH7:user/release-keys");
-        property_set("ro.build.description", "matissewifixx-user 4.4.2 KOT49H T530XXU1ANH7 release-keys");
+        /* samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOD8:user/release-keys */
+        property_set("ro.build.fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOD8:user/release-keys");
+        property_set("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXU1BOD8 release-keys");
         property_set("ro.product.model", "SM-T530");
         property_set("ro.product.device", "matissewifi");
-    } else if (strstr(bootloader, "I9301Q")) {
-        /* matissewifijv */
-        property_set("ro.build.fingerprint", "samsung/matissewifijv/matissewifi:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
-        property_set("ro.build.description", "matissewifijv-user 4.4.2 KOT49H I9301QXXUANH1 release-keys");
-        property_set("ro.product.model", "GT-I9301Q");
-        property_set("ro.product.device", "matissewifijv");
-        property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
-        gsm_properties();
-    } else if (strstr(bootloader, "I9300I")) {
-        /* matissewifids */
-        property_set("ro.build.fingerprint", "samsung/matissewifidsxx/matissewifids:4.4.4/KTU84P/I9300IXWUBNJ1:user/release-keys");
-        property_set("ro.build.description", "matissewifidsxx-user 4.4.4 KTU84P I9300IXWUBNJ1 release-keys");
-        property_set("ro.product.model", "GT-I9300I");
-        property_set("ro.product.device", "matissewifids");
-        property_set("persist.dsds.enabled", "true");
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.ril_class", "SamsungMSM8226DSRIL");
-        gsm_properties();
-    }
+    } 
 
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
     INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
 }
 
-void gsm_properties()
-{
-    property_set("telephony.lteOnGsmDevice", "0");
-    property_set("ro.telephony.default_network", "0");
-}
+
