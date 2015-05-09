@@ -59,6 +59,7 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
        rmt_storage.te \
+       sysinit.te \
        tee.te
 
 # Enable dex-preoptimization to speed up first boot sequence
