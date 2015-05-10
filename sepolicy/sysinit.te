@@ -10,3 +10,4 @@ allow sysinit kernel:lnk_file read;
 allow sysinit proc_dirty_ratio:file write;
 allow sysinit sysfs_lowmemorykiller:file open;
 allow sysinit ueventd:lnk_file read;
+#allow sysinit unlabeled:file execute;
