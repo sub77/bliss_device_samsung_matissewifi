@@ -36,6 +36,9 @@ PRODUCT_PACKAGES += \
     libsecril-client \
     libsecril-client-sap
 
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    mobiledata.interfaces=wlan0
 
 # Ramdisk
 PRODUCT_PACKAGES += \
