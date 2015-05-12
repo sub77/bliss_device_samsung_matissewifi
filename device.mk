@@ -44,6 +44,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.selinux=disabled
 
+# SELINUX
+PRODUCT_PACKAGES += \
+    joshua_brindle-sepolicy-inject
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.crda.sh \

@@ -58,6 +58,9 @@ BOARD_SEPOLICY_DIRS += \
        device/samsung/matissewifi/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+       camera.te \
+       file.te \
+       file_context \
        init.te \
        init_shell.te \
        mm-qcamerad.te \
