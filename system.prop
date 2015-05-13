@@ -35,6 +35,9 @@ ro.qualcomm.bt.hci_transport=smd
 
 # Camera
 camera2.portability.force_api=1
+ro.qc.sdk.sensors.gestures=true
+ro.qc.sdk.gestures.camera=false
+ro.qc.sdk.camera.facialproc=false
 
 # Display
 debug.composition.type=c2d 
