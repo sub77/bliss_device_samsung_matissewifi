@@ -73,7 +73,7 @@ BOARD_SEPOLICY_UNION += \
        untrusted_app.te \
        vold.te \
        wcnss_service.te \
-       zygote.te 	
+       zygote.te
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
@@ -83,3 +83,17 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+
+# BlissPop Configs
+TARGET_TC_ROM := 4.8-sm
+TARGET_TC_KERNEL := 4.9-sm
+BLISSIFY := true
+BLISS_O3 := true
+BLISS_STRICT := false
+BLISS_GRAPHITE := true
+BLISS_KRAIT := true
+BLISS_PIPE := true
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
+-include vendor/bliss/config/sm.mk
