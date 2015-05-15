@@ -80,7 +80,9 @@ PRODUCT_COPY_FILES += \
 
 # OpenDelta
 PRODUCT_PACKAGES += \
-    OpenDelta
+    OpenDelta \
+	dropbear \
+	tinyxml2
 
 # Inherit from qcom-common
 $(call inherit-product, device/samsung/msm8226-common/msm8226.mk)
