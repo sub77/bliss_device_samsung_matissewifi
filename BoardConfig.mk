@@ -38,7 +38,8 @@ TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_matissewifi.c
 
 # Kernel
 #BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg-lzma.mk
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/samsung/matissewifi/dtb --tags_offset 0x01e00000
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/custombootimg.mk
+#BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/samsung/matissewifi/dtb --tags_offset 0x01e00000
 #BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x1e00000
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x37 androidboot.bootdevice=msm_sdcc.1
@@ -57,7 +58,7 @@ TARGET_PREBUILT_KERNEL := device/samsung/matissewifi/kernel
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00A7DEA0
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01A7DEA0
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2097152000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12562627584
 
