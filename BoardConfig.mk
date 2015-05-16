@@ -37,23 +37,23 @@ BOARD_HARDWARE_CLASS := device/samsung/matissewifi/cmhw
 TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_matissewifi.c
 
 # Kernel
-#BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg-lzma.mk
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/custombootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg-lzma.mk
+#BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/custombootimg.mk
 #BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --dt device/samsung/matissewifi/dtb --tags_offset 0x01e00000
-#BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x1e00000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x1e00000
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x37 androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 
-#TARGET_KERNEL_SOURCE := kernel/samsung/matissewifi
-#TARGET_KERNEL_CONFIG := twrp-matissewifi_defconfig
-#TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
-#TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/s3ve3g
+TARGET_KERNEL_CONFIG := msm8226-sec_defconfig
+TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
 
 #TARGET_KERNEL_RECOVERY_CONFIG
 
-TARGET_PREBUILT_KERNEL := device/samsung/matissewifi/kernel
+#TARGET_PREBUILT_KERNEL := device/samsung/matissewifi/kernel
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 4096
@@ -106,12 +106,12 @@ MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := $(LOCAL_PATH)/rootdir/twrp.fstab
 # End of first RAM region is 0x083fffff, so we set it to for example 0x06500000
-MR_KEXEC_MEM_MIN := 0x07500000
+MR_KEXEC_MEM_MIN := 0x06500000
 MR_KEXEC_DTB := true
-#MR_USE_QCOM_OVERLAY := true
-#MR_QCOM_OVERLAY_HEADER := device/samsung/matissewifi/headers/msm_mdp.h
-#MR_QCOM_OVERLAY_HEADER2 := hardware/qcom/msm8x26/kernel-headers/linux/msm_ion.h
-#MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
+MR_USE_QCOM_OVERLAY := true
+MR_QCOM_OVERLAY_HEADER := device/samsung/matissewifi/headers/msm_mdp.h
+MR_QCOM_OVERLAY_HEADER2 := hardware/qcom/msm8x26/kernel-headers/linux/msm_ion.h
+MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 # MR_INFOS := d$(LOCAL_PATH)/mrom_infos
 
 # SELinux
