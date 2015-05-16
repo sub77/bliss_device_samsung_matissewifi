@@ -106,11 +106,11 @@ MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := $(LOCAL_PATH)/rootdir/twrp.fstab
 # End of first RAM region is 0x083fffff, so we set it to for example 0x06500000
-MR_KEXEC_MEM_MIN := 0x06500000
+MR_KEXEC_MEM_MIN := 0x07500000
 MR_KEXEC_DTB := true
 #MR_USE_QCOM_OVERLAY := true
-#MR_QCOM_OVERLAY_HEADER := "device/samsung/s3ve3g/headers//msm_mdp.h"
-#MR_QCOM_OVERLAY_HEADER2 := "hardware/qcom/msm8x26/kernel-headers/linux/msm_ion.h"
+#MR_QCOM_OVERLAY_HEADER := device/samsung/matissewifi/headers/msm_mdp.h
+#MR_QCOM_OVERLAY_HEADER2 := hardware/qcom/msm8x26/kernel-headers/linux/msm_ion.h
 #MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 # MR_INFOS := d$(LOCAL_PATH)/mrom_infos
 

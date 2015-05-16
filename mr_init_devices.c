@@ -38,7 +38,7 @@ const char *mr_init_devices[] =
     "/sys/devices/platform/msm_hsusb_host*",
 
     // for qualcomm overlay - /dev/ion
-    // "/sys/devices/virtual/misc/ion",
+    //"/sys/devices/virtual/misc/ion",
 
     NULL
 };
