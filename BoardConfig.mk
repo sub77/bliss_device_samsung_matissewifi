@@ -103,7 +103,7 @@ TW_CRYPTO_KEY_LOC := "footer"
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := $(LOCAL_PATH)/mr_init_devices.c
 MR_DPI := hdpi
-MR_DPI_FONT := 216
+MR_DPI_FONT := 160
 MR_FSTAB := $(LOCAL_PATH)/rootdir/twrp.fstab
 # End of first RAM region is 0x083fffff, so we set it to for example 0x06500000
 MR_KEXEC_MEM_MIN := 0x06500000
