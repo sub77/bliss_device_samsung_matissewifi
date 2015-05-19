@@ -12,29 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-
-# bootanimation
-TARGET_BOOTANIMATION_SIZE := 1280x800
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common_tablet.mk)
 
-# Inherit from matissewifi device
-$(call inherit-product, device/samsung/matissewifi/device.mk)
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    charger
 
-# Screen density
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_COPY_FILES += \
+    device/samsung/matissewifi/kernel:kernel 
 
-# Device identifier. This must come after all inclusions
-PRODUCT_RELEASE_NAME := matissewifi
-PRODUCT_DEVICE := matissewifi
+PRODUCT_COPY_FILES += \
+	device/samsung/matissewifi/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+	device/samsung/matissewifi/twrp.fstab:recovery/root/etc/twrp.fstab
+
 PRODUCT_NAME := omni_matissewifi
-PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-T530
-
-#Set build fingerprint / ID / Prduct Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SM-T530 TARGET_DEVICE=matissewifi BUILD_FINGERPRINT=samsung/matissewifixx/matissewifi:4.4.2/KOT49H/T530XXU1ANH7:user/release-keys PRIVATE_BUILD_DESC="matissewifixx-user 4.4.2 KOT49H T530XXU1ANH7 release-keys"
-
+PRODUCT_DEVICE := matissewifi
+PRODUCT_BRAND := Samsung
+PRODUCT_MODEL := Galaxy Tab 4 10.1 WiFi
+PRODUCT_MANUFACTURER := Samsung

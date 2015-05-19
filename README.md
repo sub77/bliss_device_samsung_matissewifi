@@ -3,7 +3,7 @@ Device Tree For Samsung Galaxy Tab 4 10.1
 
 | Basic   | Spec Sheet                  |
 | -------:|:--------------------------- |
-| CPU     | Quad-core 1.4 GHz Cortex-A7 | 
+| CPU     | Quad-core 1.2 GHz Cortex-A7 | 
 | CHIPSET | Qualcomm Snapdragon 400 |
 | GPU     | Adreno 305 |
 | Memory  | 1.5GB RAM |
